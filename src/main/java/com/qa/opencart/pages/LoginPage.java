@@ -3,16 +3,19 @@ package com.qa.opencart.pages;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.qa.opencart.factory.DriverFactory;
 import com.qa.opencart.utils.Constants;
 import com.qa.opencart.utils.ElementUtil;
 
 import io.qameta.allure.Step;
 
 public class LoginPage {
+	private static final Logger LOGGER = Logger.getLogger(String.valueOf(LoginPage.class));
 
 	private WebDriver driver;
 	private ElementUtil elementUtil;
@@ -35,11 +38,13 @@ public class LoginPage {
 	// 3. Page Methods/Actions
 	@Step("Getting login Page title")
 	public String getLoginPageTitle() {
+		LOGGER.info("getting login page title");
 		return elementUtil.waitForPageTitlePresent(Constants.LOGIN_PAGE_TITLE, 5);
 	}
 
 	@Step("Checking website logo is present")
 	public boolean websiteLogo() {
+		LOGGER.info("checking website logo");
 		return elementUtil.getElement(logo).isDisplayed();
 	}
 
@@ -67,7 +72,7 @@ public class LoginPage {
 	
 	@Step("Navigate to Register Page")
 	public RegisterPage navigateToRegisterPage() {
-		System.out.println("Navigate to Register Page...");
+		LOGGER.info("Navigate to Register Page...");
 		elementUtil.doClick(registerLink);
 		return new RegisterPage(driver);
 		
