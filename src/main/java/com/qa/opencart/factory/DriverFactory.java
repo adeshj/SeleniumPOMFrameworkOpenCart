@@ -39,7 +39,7 @@ public class DriverFactory {
 	 */
 	public WebDriver init_driver(Properties prop) {
 		String browserName = prop.getProperty("browser");
-		LOGGER.info("Browser name is: <<<<" + browserName + ">>>>");
+		LOGGER.info("Browser name is: <<<< " + browserName + " >>>>");
 
 		highlight = prop.getProperty("highlight").trim();
 		optionsManager = new OptionsManager(prop);

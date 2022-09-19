@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Open Cart Test automtion suite" thread-count="3" parallel="tests" verbose="3">
+<suite name="Open Cart Test automation suite" thread-count="3" verbose="3">
 
 	<listeners>
-		<!-- 		<listener class-name="com.qa.opencart.testlistners.ExtentReportListener" />  -->
-		<listener class-name="com.qa.opencart.testlistners.TestAllureListener" />
+		<listener class-name="com.qa.opencart.testlistners.ExtentReportListener" />
+		<!-- 		<listener class-name="com.qa.opencart.testlistners.TestAllureListener" /> -->
 		<!--		<listener class-name="com.qa.opencart.testlistners.TesultsListener" />  -->
 	</listeners>
 

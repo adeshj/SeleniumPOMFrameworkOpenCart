@@ -41,11 +41,11 @@ public class RegisterPage {
 	public boolean accountRegistration(String firstname, String lastname, String email, String telephone,
 			String password, String subscribe) {
 
-		email = "au" + getRandomNumber() + "@gm.com";
+		email = "AJ_Test" + getRandomNumber() + "@gm.com";
 
 		elementUtil.doSendKeys(this.firstname, firstname);
 		elementUtil.doSendKeys(this.lastname, lastname);
-		elementUtil.doSendKeys(this.email, email);// tom9898@gmail.com
+		elementUtil.doSendKeys(this.email, email);
 		elementUtil.doSendKeys(this.telephone, telephone);
 		elementUtil.doSendKeys(this.password, password);
 		elementUtil.doSendKeys(this.confirmpassword, password);
