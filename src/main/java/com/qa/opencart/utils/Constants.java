@@ -23,4 +23,6 @@ public class Constants {
 
 		return accList;
 	}
+
+	public static final String WRITE_A_REVIEW = "Write a review";
 }

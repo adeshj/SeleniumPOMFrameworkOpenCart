@@ -63,4 +63,11 @@ public class ProductInfoPageTest extends BaseTest {
 		softAssert.assertAll();
 	}
 
+	@Test
+	public void verifyProductWriteReviewTest() {
+		accountsPage.doSearch("iPhone");
+		productInfoPage = accountsPage.selectProductFromResults("iPhone");
+		Assert.assertEquals(productInfoPage.goToProductReviewSection(), Constants.WRITE_A_REVIEW);
+	}
+
 }

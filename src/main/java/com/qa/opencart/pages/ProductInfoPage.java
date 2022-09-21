@@ -19,6 +19,8 @@ public class ProductInfoPage {
 	private By quantity = By.id("input-quantity");
 	private By addToCartButton = By.id("button-cart");
 	private By productImages = By.cssSelector("ul.thumbnails li");
+	private By writeAReviewButton = By.cssSelector("div.rating p a");
+	private By writeAReviewText = By.cssSelector("div.tab-content div h2");
 
 	public ProductInfoPage(WebDriver driver) {
 		this.driver = driver;
@@ -61,6 +63,12 @@ public class ProductInfoPage {
 		String title = elementUtil.waitForPageTitlePresent(productName, 5);
 		System.out.println("Product Page Title is:" + title);
 		return title;
+	}
+
+	public String goToProductReviewSection() {
+		elementUtil.doClick(writeAReviewButton);
+		String reviewText = elementUtil.doGetText(writeAReviewText);
+		return reviewText;
 	}
 
 }
