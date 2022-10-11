@@ -8,7 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.qa.opencart.factory.DriverFactory;
 import com.qa.opencart.utils.Constants;
 import com.qa.opencart.utils.ElementUtil;
 
